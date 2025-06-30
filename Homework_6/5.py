@@ -24,6 +24,20 @@ months = {
 
 user_input = input("Введите число от 1 до 12: ")
 
+if not user_input.isdigit():
+    print("Ошибка: введено не число.")
+else:
+    month_num = int(user_input)
+    if month_num < 1 or month_num > 12:
+        print("Ошибка: число должно быть от 1 до 12.")
+    else:
+        name, season, days = months[month_num]
+        print(f"Месяц: {name}")
+        print(f"Пора года: {season}")
+        print(f"Количество дней: {days}")
+
+# Или
+
 if user_input.isdigit():
     num = int(user_input)
     if 1 <= num <= 12:
