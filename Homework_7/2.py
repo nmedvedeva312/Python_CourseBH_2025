@@ -25,3 +25,7 @@ for word in words:
 
 result_phrase = " ".join(result_words)
 print(result_phrase)
+
+s = "How are you".split()
+
+# s1 = ''.join(''.join(char * i for i, char in enumerate(word, 1)) for user in users)
