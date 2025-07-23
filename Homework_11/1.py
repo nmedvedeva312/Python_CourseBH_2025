@@ -65,6 +65,23 @@ class Phone:
     def __str__(self):
         return f"Бренд: {self.brand}\nМодель: {self.model}\nГод выпуска: {self.issue_year}"
     
+# или с указанием типов данных
+
+class Phone:
+    def __init__(self, brand: str, model: str, issue_year: int) -> None:
+        self.brand: str = brand
+        self.model: str = model
+        self.issue_year: int = issue_year
+
+    def receive_call(self, name: str) -> None:
+        print(f"{self.brand}-{self.model} - Звонит {name}")
+
+    def get_info(self) -> tuple[str, str, int]: # аннотация типа возвращаемого значения функции
+        return self.brand, self.model, self.issue_year
+
+    def __str__(self) -> str:
+        return f"Бренд: {self.brand}\nМодель: {self.model}\nГод выпуска: {self.issue_year}"
+    
 p1 = Phone()
 print(p1)
 # Бренд: None
